@@ -1,7 +1,9 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
+  application:
+    name: appmic-shiftsystem
   datasource:
     url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:turnos}?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     username: ${DB_USER:root}
@@ -20,6 +22,6 @@ management:
       exposure:
         include: health,info
 
-# CORS para el Angular local
+# CORS para Angular local
 cors:
   allowed-origins: "http://localhost:4200,http://127.0.0.1:4200"
