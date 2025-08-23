@@ -14,7 +14,7 @@ services:
 
   appmic-shiftsystem:
     build:
-      context: ./turnos-backend-mysql-full
+      context: ./
       dockerfile: Dockerfile
     container_name: appmic-shiftsystem
     restart: always
