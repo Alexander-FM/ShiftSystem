@@ -14,8 +14,8 @@ docker compose up -d
 
 Credenciales por defecto (ver `docker-compose.yml`):
 - DB: `turnos`
-- user: `turnos`
-- pass: `secret`
+- user: `root`
+- pass: `root_password`
 
 ## 2) Configurar aplicación
 `src/main/resources/application.yml` ya viene listo para usar variables de entorno:
@@ -54,6 +54,3 @@ mvn spring-boot:run
 ## Notas
 - El consumo RENIEC es **mock** para la demo. Implementa un `ReniecClient` real con `WebClient` y credenciales si vas a producción.
 - Si usas Angular, apúntalo a `http://localhost:8080` y habilita CORS (ya está).
-
-¡Éxitos con el video! 💚
-# ShiftSystem
