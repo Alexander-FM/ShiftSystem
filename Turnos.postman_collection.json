@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "Turnos API",
+    "_postman_id": "b5d5d5e1-aaaa-bbbb-cccc-ddddeeee1111",
+    "description": "Colección de endpoints para el backend de turnos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Mock RENIEC lookup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/reniec/lookup/12345678",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reniec",
+            "lookup",
+            "12345678"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear ticket",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"dni\": \"12345678\", \"firstName\": \"Juan\", \"lastName\": \"P\\u00e9rez\", \"fullName\": \"Juan P\\u00e9rez\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/tickets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Llamar siguiente",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/tickets/next?module=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tickets",
+            "next"
+          ],
+          "query": [
+            {
+              "key": "module",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Últimos llamados (tablero)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/board/last?limit=3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "board",
+            "last"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "3"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
